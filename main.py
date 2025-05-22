@@ -7,7 +7,7 @@ app = FastAPI()
 async def health_check():
     return "The health check is successful"
 
-@app.get("/status", response_class=HTMLResponse)
+'''@app.get("/status", response_class=HTMLResponse)
 async def status_check():
     html_content = """
     <html>
@@ -39,3 +39,4 @@ async def status_check():
     </html>
     """
     return html_content
+'''
