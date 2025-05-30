@@ -19,4 +19,10 @@ async def register_user(user: UserCreate) -> UserOut:
     user_dict["password"] = hashed_pwd
 
     result = await users_collection.insert_one(user_dict)
-    return UserOut(id=str(result.inserted_id), name=user.name, email=user.email)
+
+    return UserOut(
+        id=str(result.inserted_id),
+        name=user.name,
+        email=user.email
+    )
+
